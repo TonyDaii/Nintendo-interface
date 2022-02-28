@@ -1,8 +1,9 @@
-export default function Character() {
+// == Composant
+export default function Character({image, name}) {
     return(
         <div className="character">
-            <img className="image"></img>
-            <h2>Zelda</h2>
+            <img className="image" src={image} alt={name}></img>
+            <h2>{name}</h2>
         </div>
     )
 } 

@@ -1,14 +1,15 @@
+// == Import
 import './styles.scss';
 
-export default function Games() {
+// == Composant
+export default function Games({list, changeGame}) {
     return(
         <ul className="games">
-            <li className="game"><a className="game-link">Zelda</a></li>
-            <li className="game"><a className="game-link">Zelda</a></li>
-            <li className="game"><a className="game-link">Zelda</a></li>
-            <li className="game"><a className="game-link">Zelda</a></li>
-            <li className="game"><a className="game-link">Zelda</a></li>
-            <li className="game"><a className="game-link">Zelda</a></li>
+            {list.map((game) => (
+                <li key={game} className="game">
+                    <a className="game-link" onClick={() => changeGame(game)}>{game}</a>
+                </li>
+            ))}
         </ul>
     )
 } 
