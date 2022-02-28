@@ -1,3 +1,6 @@
+// == import npm
+import PropTypes from 'prop-types';
+
 // == Import
 import './styles.scss';
 
@@ -13,3 +16,9 @@ export default function Games({list, changeGame}) {
         </ul>
     )
 } 
+
+Games.propTypes = {
+    list: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    changeGame: PropTypes.func.isRequired,
+};
+  

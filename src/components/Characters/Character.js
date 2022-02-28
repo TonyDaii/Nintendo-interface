@@ -1,3 +1,6 @@
+// == Import
+import PropTypes from 'prop-types';
+
 // == Composant
 export default function Character({image, name}) {
     return(
@@ -7,3 +10,9 @@ export default function Character({image, name}) {
         </div>
     )
 } 
+
+Character.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+};
+  

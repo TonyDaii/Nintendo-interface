@@ -1,3 +1,6 @@
+// == import npm
+import PropTypes from "prop-types";
+
 // == Import
 import "./styles.scss";
 import Character from "./Character";
@@ -12,3 +15,11 @@ export default function Characters({ list }) {
     </div>
   );
 }
+
+Characters.propTypes = {
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};
